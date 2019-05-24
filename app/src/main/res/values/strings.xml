@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">ViewPager2DynamicHeightShowcase</string>
+    <string name="app_name">ViewPager2 Dynamic Height Showcase</string>
+    <string name="element_3">Element #3</string>
+    <string name="element_4">Element #4</string>
+    <string name="element_2">Element #2</string>
+    <string name="element_1">Element #1</string>
+    <string name="random_sub_headline">This simulates an asynchronous fill-up such as working with LiveData. Each Fragment
+        starts off with 4 elements, but then removes on a random base some elements. The size of one Fragment then
+        influences all the others. Use the button to randomly reload the current Fragment elements.
+    </string>
+    <string name="fixed_sub_headline">The elements are loaded when the UI is created. But since the first Fragment has 3
+        elements, the others either have to much space or can not fit in the 4th element. The size does not adapt.
+        Click on the elements to get information regarding their visibility.
+    </string>
+    <string name="random_headline">Random Elements After 2s Delay</string>
+    <string name="fixed_headline">Fixed Size</string>
 </resources>

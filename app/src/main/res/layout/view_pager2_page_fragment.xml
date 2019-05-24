@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+                name="numberOfItems"
+                type="Integer"/>
+
+        <variable
+                name="clickListener"
+                type="at.spiesberger.viewpager2dynamicheightshowcase.ViewPager2PageFragment"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ViewPager2PageFragment"
+            android:background="@color/black">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                style="@style/element"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/element_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/element1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:onClick='@{() -> clickListener.click("#1")}'
+                android:id="@+id/element1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                style="@style/element"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/element_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/element2"
+                android:id="@+id/element2"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:onClick='@{() -> clickListener.click("#2")}'
+                app:layout_constraintTop_toBottomOf="@+id/element1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                style="@style/element"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/element_3"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/element3"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/element3"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:onClick='@{() -> clickListener.click("#3")}'
+                app:layout_constraintTop_toBottomOf="@+id/element2"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                style="@style/element"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/element_4"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/element4"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/element4"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:onClick='@{() -> clickListener.click("#4")}'
+                app:layout_constraintTop_toBottomOf="@+id/element3"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
